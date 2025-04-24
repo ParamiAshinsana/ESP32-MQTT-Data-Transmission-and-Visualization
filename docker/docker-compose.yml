@@ -1,0 +1,16 @@
+version: '3'
+services:
+  emqx:
+    image: emqx/emqx:latest
+    ports:
+      - "1883:1883"   # MQTT port
+      - "18083:18083" # Dashboard
+    restart: always
+
+  nodered:
+    image: nodered/node-red:latest
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered_data:/data
+    restart: always
