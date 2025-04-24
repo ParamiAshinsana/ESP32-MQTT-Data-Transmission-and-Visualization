@@ -6,6 +6,7 @@ services:
       - "1883:1883"   # MQTT port
       - "18083:18083" # Dashboard
       - "18082:18082" # EQ
+      - "18082:18082" # EQ
     restart: always
 
   nodered:
