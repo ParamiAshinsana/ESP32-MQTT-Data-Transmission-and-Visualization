@@ -8,6 +8,7 @@ services:
       - "18082:18082" # EQ
     restart: always
 
+
   nodered:
     image: nodered/node-red:latest
     ports:
